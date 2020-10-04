@@ -28,7 +28,7 @@
              v-bind:value="name"
       > -->
       <input type="text" v-model="name">
-      <p>Your Name: {{ name }}</p>
+      <p>Your Name: {{ fullname }}</p>
       <button v-on:click="resetInput">Reset Input</button>
       <form v-on:submit.prevent="submitForm" action="">
         <input type="text">
