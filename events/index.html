@@ -22,11 +22,14 @@
       <button v-on:click="decreaseNumber(5)">Remove</button>
       <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
-      <input type="text"
+      <!-- <input type="text"
              v-on:input="setName($event, 'Yiro')"
              v-on:keyup.enter="confirmInput"
-      >
-      <p>Your Name: {{ confirmedName }}</p>
+             v-bind:value="name"
+      > -->
+      <input type="text" v-model="name">
+      <p>Your Name: {{ name }}</p>
+      <button v-on:click="resetInput">Reset Input</button>
       <form v-on:submit.prevent="submitForm" action="">
         <input type="text">
         <button>Sign Up</button>

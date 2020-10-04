@@ -8,19 +8,22 @@ const app = Vue.createApp({
   },
   methods: {
     confirmInput() {
-      this.confirmedName = this.name
+      this.confirmedName = this.name;
     },
     submitForm() {
       alert('Submitted');
     },
-    setName(eventn, name) {
-      this.name = event.target.value + name
+    setName(event, name) {
+      this.name = event.target.value;
     },
     addNumber(num) {
-      this.counter = this.counter + num
+      this.counter = this.counter + num;
     },
     decreaseNumber(num) {
-      this.counter = this.counter - num
+      this.counter = this.counter - num;
+    },
+    resetInput() {
+     this.name = '';
     }
   }
 });
