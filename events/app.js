@@ -3,15 +3,39 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: '',
-      confirmedName: ''
+      confirmedName: '',
+      //fullname: '',
+      lastName:''
     };
+  },
+  watch:{
+    counter(value) {
+      if(value > 10) {this.counter = 0}
+    }
+    // name(value) {
+    //   if(value === '') {
+    //     this.fullname = '';
+    //   }else {
+    //     this.fullname = value + ' ' + this.lastName;
+    //   }
+
+    //   //en este caso el value es el nombre de la propiedad name
+    //   //lo pasamos como argumento
+    // },
+    // lastName(value) {
+    //   if(value === '') {
+    //     this.fullname = '';
+    //   }else {
+    //     this.fullname = this.name + ' ' + value;
+    //   }
+    // }
   },
   computed:{
     fullname() {
       if(this.name === '') {
               return '';
             }
-      return this.name + ' ' + 'Yi'
+      return this.name + ' ' + this.lastName;
     }
   },
   methods: {
