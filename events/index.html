@@ -19,7 +19,7 @@
     <section id="events">
       <h2>Events in Action</h2>
       <button v-on:click="addNumber(5)">Add</button>
-      <button v-on:click="decreaseNumber(5)">Remove</button>
+      <button @click="decreaseNumber(5)">Remove</button>
       <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
       <!-- <input type="text"
